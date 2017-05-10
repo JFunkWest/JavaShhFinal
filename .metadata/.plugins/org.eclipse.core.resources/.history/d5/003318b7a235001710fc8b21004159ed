@@ -1,0 +1,15 @@
+package first;
+
+public class Game {
+	public Game() {
+		
+	}
+	
+	public void tick() {
+		
+	}
+	
+	public void render() {
+		
+	}
+}

@@ -1,0 +1,31 @@
+package first;
+import java.awt.*;
+import javax.swing.*;
+import java.applet.*;
+public class Beginning extends Applet implements Runnable{
+	public static final long serialVersionUID = 1L;
+	
+	public Beginning() {
+		
+	}
+	
+	public void start() {
+		
+	}
+	
+	public void stop() {
+		
+	}
+	
+	public void run() {
+		
+	}
+	
+	public static void main(String args[]) {
+		Beginning beginning = new Beginning();
+		
+		JFrame frame = new JFrame();
+		frame.add(beginning);
+		frame.pack();
+	}
+}

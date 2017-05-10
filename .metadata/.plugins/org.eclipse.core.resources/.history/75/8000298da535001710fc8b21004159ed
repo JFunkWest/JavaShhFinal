@@ -1,0 +1,31 @@
+package first;
+import java.awt.*;
+import java.util.*;
+import java.awt.image.*;
+
+
+public class Game {
+	public static BufferedImage screen;
+	
+	public static int[] pixels;
+	
+	public Game() {
+		screen = new BufferedImage((int) Component.pixel.getWidth(), (int) Component.pixel.getHeight());
+		
+		pixels = new int[(int) Component.pixel.getWidth() * (int) Component.pixel.getHeight()];
+		pixels = ((DataBufferInt) screen.getRaster().getDataBuffer()).getData();
+		
+		for(int x = 0; x < Component.pixel.getWidth(); x ++) {
+			for(int y = 0; y < (int) Component.pixel.getHeight(); y ++) {
+				pixels[(y * (int) Component.pixel.getWidth()) + x] = new Random().nextInt();			}
+		}
+	}
+	
+	public void tick() {
+		
+	}
+	
+	public void render(Graphics g) {
+		
+	}
+}
