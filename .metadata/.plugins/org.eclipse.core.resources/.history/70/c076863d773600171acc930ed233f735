@@ -1,0 +1,20 @@
+package attempt.plswork.game;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class Display extends Canvas {
+	
+	public static int WIDTH = 800;
+	public static int HEIGTH = 600;
+	
+	public static void main(String[] args) {
+		Display game = new Display();
+		JFrame frame = new JFrame();
+		frame.add(game);
+		frame.setSize(WIDTH, HEIGHT);
+		frame.setResizable(false);
+		frame.setVisible(true);
+		
+	}
+}
