@@ -1,0 +1,16 @@
+package attempt.plswork.game.graphics;
+
+public class Screen extends Render {
+	
+	private Render test;
+	
+	public Screen(int width, int height) {
+		super(width, height);
+		test = mew Render(256, 256);
+	}
+
+	public void render() {
+		draw(test, 0, 0);
+	}
+	
+}

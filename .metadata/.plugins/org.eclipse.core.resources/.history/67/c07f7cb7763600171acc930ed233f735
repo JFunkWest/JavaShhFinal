@@ -1,6 +1,0 @@
-package attempt.plswork.game;
-
-public class Display {
-	int WIDTH = 800;
-	int HEIGTH = 600;
-}
