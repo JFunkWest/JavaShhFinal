@@ -1,0 +1,25 @@
+package attempt.plswork.game.graphics;
+
+import java.util.Random;
+
+public class Screen extends Render {
+	
+	private Render test;
+	
+	public Screen(int width, int height) {
+		super(width, height);
+		Random random = new Random();
+		test = new Render(256, 256);
+		for (int i = 0; i < 256 * 256; i++) {
+			test.pixels[i] = random.nextInt();
+		}
+	}
+
+	public void render() {
+		int anim = (int) (Math.sin(System.currentTimeMillis()%2000.0/2000*Math.PI * 2) * 100);
+		int anim2 = (int) (Math.sin(System.currentTimeMillis()%2000.0/2000*Math.PI * 2) * 100);
+		
+		draw(test, (width - 2) / 2 + anim, (height - 2) / 2 + anim2);
+	}
+	
+}
