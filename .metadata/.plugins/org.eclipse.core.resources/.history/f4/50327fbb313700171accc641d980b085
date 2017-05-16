@@ -1,8 +1,0 @@
-package attempt.plswork.game.graphics;
-
-public class Render {
-	public final int width;
-	public final height;
-	public final int[] pixels;
-
-}
