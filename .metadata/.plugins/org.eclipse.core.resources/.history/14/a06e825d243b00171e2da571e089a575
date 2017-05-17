@@ -1,0 +1,45 @@
+package finalJava;
+import java.util.*;
+import javax.swing.*;
+public class FlipACoin {
+	 public static void main(String[] args)
+	    {
+	        String input;
+	        int numberOfTosses;
+	        
+	        input =
+	            JOptionPane.showInputDialog("How many times do you want this virtual coin to be tossed?");
+	        numberOfTosses = Integer.parseInt(input);
+	        
+	        coinToss(numberOfTosses);
+	        
+	        JOptionPane.showMessageDialog(null, "Thank you and come again!");
+	        
+	    }
+	    
+	    public static void coinToss(int number)
+	    {
+	        int numberOfHeads = 0,
+	            numberOfTails = 0,
+	            currentNumber,
+	            currentToss = 1;
+	    
+	        Random tossMachine = new Random();
+	    
+	        while (currentToss <= number)
+	        {
+	        currentNumber = tossMachine.nextInt(1 + 1);
+	        
+	        if (currentNumber == 0)
+	            numberOfHeads++;
+	        else if (currentNumber != 0)
+	            numberOfTails++;
+	        
+	        currentToss++;
+	        }
+	        
+	        JOptionPane.showMessageDialog(null, "Out of the number of tosses you asked, there were " + 
+	                                      numberOfHeads + " heads resulted and " + numberOfTails + " tails.");
+	        
+	    }
+	}

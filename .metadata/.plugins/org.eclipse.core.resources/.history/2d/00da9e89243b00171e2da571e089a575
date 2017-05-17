@@ -14,7 +14,7 @@ public class MainMenu extends FlipACoin {
 		
 		if(choiceConvert == 1)
 		{
-			FlipACoin.main(args);
+			
 		}
 	}
 

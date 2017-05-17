@@ -5,4 +5,5 @@
 <fullyQualifiedTypeName name="attempt.plswork.game.graphics.Screen"/>
 <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
 <fullyQualifiedTypeName name="java.awt.Image"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 </qualifiedTypeNameHistroy>

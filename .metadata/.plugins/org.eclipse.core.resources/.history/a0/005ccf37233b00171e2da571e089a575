@@ -2,7 +2,7 @@ package finalJava;
 
 import javax.swing.JOptionPane;
 
-public class MainMenu extends FlipACoin {
+public class MainMenu {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -14,7 +14,7 @@ public class MainMenu extends FlipACoin {
 		
 		if(choiceConvert == 1)
 		{
-			FlipACoin.main(args);
+			FlipACoin.coin();
 		}
 	}
 
