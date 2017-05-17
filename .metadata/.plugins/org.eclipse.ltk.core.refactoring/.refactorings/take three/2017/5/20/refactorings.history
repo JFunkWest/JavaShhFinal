@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 2 packages to &apos;take two/src&apos;&#x0D;&#x0A;- Original project: &apos;take three&apos;&#x0D;&#x0A;- Destination element: &apos;take two/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     take three/src/attempt.plswork.game.graphics&#x0D;&#x0A;     take three/src/attempt.plswork.game&#x0D;&#x0A;- Update references to refactored element" description="Move packages" destination="=take two/src" element1="/src&lt;attempt.plswork.game.graphics" element2="/src&lt;attempt.plswork.game" flags="589830" fragments="2" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1494869873763" version="1.0"/>
+</session>
