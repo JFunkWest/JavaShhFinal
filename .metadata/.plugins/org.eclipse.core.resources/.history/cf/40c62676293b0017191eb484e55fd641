@@ -1,0 +1,15 @@
+package finalJava;
+
+import javax.swing.JOptionPane;
+
+public class MainMenu {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String choice;
+		
+		choice = JOptionPane.showInputDialog(null, "Which game are you going to select?\n1: Flip a coin\n2: Tic Tac Toe "
+				+ "\n3: Guess the number \n4: Black Jack \n5: Russian Roulette  "); 
+	}
+
+}
