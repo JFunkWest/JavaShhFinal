@@ -8,7 +8,7 @@ public class NumberGuess {
 	{
 		// TODO Auto-generated method stub
 final int MIN = 1;
-final int MAX = 10;
+final int MAX = 5;
 		int random;
 		int guess;
 		boolean isMatch;
