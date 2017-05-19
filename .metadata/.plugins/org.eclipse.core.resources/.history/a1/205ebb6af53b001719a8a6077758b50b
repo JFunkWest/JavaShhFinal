@@ -1,0 +1,17 @@
+package finalJava;
+
+public class MoneyTotal {
+	private static int moneyTotal = 100;
+
+	public static int getMoneyTotal() {
+		return moneyTotal;
+	}
+
+	public static void setMoneyTotal(int moneyTotal, int newMoney) {
+		MoneyTotal.moneyTotal = moneyTotal + newMoney;
+	}
+
+	
+
+	
+}

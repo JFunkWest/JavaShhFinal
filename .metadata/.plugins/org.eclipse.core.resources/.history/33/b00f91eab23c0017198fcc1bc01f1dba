@@ -1,0 +1,51 @@
+package finalJava;
+import javax.swing.JOptionPane;
+import java.util.Random;
+import javax.swing.*;
+public class FlipACoin {
+
+	
+
+	public static void displayOutcome()
+	{
+		Random r = new Random();
+		int computer = r.nextInt(3) + 1;
+		int rock = 1, paper = 2, scissors = 3;
+		String userPick, computerPick;
+		int userAnswer, computerAnswer = 0, result = 0;
+		int answerInt;
+		
+		userAnswer = JOptionPane.showInputDialog(null, "Choose \n0 for Heads\n1 for Tails");
+		answerInt = Integer.parseInt(userAnswer);
+		
+		if(answerInt == 0)
+			userAnswer = "Heads";
+		else
+			if(answerInt == 1)
+				userAnswer = "Tails";
+		if(computer == 0)
+			computerPick = "Heads";
+		else
+			if(computer == 1)
+				computerPick = "Tails";
+		if(answerInt == 0);
+			if(computer == 0)
+				result = "You win.";
+			else
+				if(computer == 1)
+					result = "You lose.";				
+		if(answerInt == 1)
+			if(computer == 1)
+				result = "You win.";
+			else
+				if(computer == 0)
+					result = "You lose";
+		if(computer == 0)
+			computerAnswer = "Heads";
+		else
+			if(computer == 1)
+				computerAnswer = "Tails";
+		
+		JOptionPane.showMessageDialog(null,  "You picked " + userAnswer + ". The coin landed on " + computerAnswer + ". " + result);
+	}
+}

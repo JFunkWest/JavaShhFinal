@@ -1,0 +1,35 @@
+package finalJava;
+
+import javax.swing.*;
+public class FlipACoin {
+
+	
+	private static int moneyTotal = 100;
+
+	public static void displayOutcome()
+	{
+		
+		 final int MIN = 0;
+		    final int MAX = 1;
+		    int random;
+		    int guess;
+		    boolean isMatch;
+		    int plays = 5;
+		    int thisManyTimes = 0;
+		   
+		    String guessString;
+		    MoneyTotal.displayMoney(moneyTotal);
+		    JOptionPane.showMessageDialog(null, moneyTotal);
+		    for(int i = 0; i < plays; i++)
+		    {
+		    random = MIN + (int)(Math.random() * MAX);
+		    guessString = JOptionPane.showInputDialog(null, "Guess my number between " + MIN + " and " +
+		    MAX, "Random guess", JOptionPane.INFORMATION_MESSAGE);
+		    guess = Integer.parseInt(guessString);
+		    isMatch = guess == random;
+		    JOptionPane.showMessageDialog(null, "The number was " + random + ". The result is " + isMatch + ".");
+		    ++thisManyTimes;
+		    JOptionPane.showMessageDialog(null, "You have tried " + thisManyTimes + " you have a total of " + plays + " left."); 
+		    }
+	}
+}

@@ -1,0 +1,39 @@
+package finalJava;
+import java.util.*;
+import java.io.*;
+import java.math.*;
+import javax.swing.*;
+public class FlipACoin {
+	 public static void main(String[] args) {
+			    int toss;
+			    int counter;      // Number of times to flip coin
+			    int heads, tails; // Number of heads and tails tossed
+			    String input;
+		  
+			    counter = 0;
+			    heads = 0;
+			    tails = 0;
+			     		      
+			    input = JOptionPane.showInputDialog("Enter amount of times you want the coin to be tossed");
+			    toss = Integer.parseInt(input);
+			         
+			    Random coinToss = new Random();
+			    int random = coinToss.nextInt(2);
+			    while (counter < toss){
+			    	if (random > 0.5) {
+			    		heads = heads + 1;
+			    		System.out.println("You got heads");
+			        	}
+			    	else if (random < 0.5) {
+			    		tails = tails + 1;
+			    		System.out.println("You got tails");
+			    random = coinToss.nextInt(2);
+		         }
+		         	counter++;
+			     }
+			     JOptionPane.showMessageDialog(null, "For your tosses you got \n" + "-------------------\n" + "Heads: " + heads + "\nTails: " + tails);
+			                                  
+		
+     } // end main
+		
+ } // end class CoinToss
