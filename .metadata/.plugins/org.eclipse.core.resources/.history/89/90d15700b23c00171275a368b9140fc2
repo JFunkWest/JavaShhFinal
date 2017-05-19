@@ -1,8 +1,8 @@
-package finalJava;
+package gameZone;
 
 import javax.swing.JOptionPane;
 
-public class DisplayFlipAcoin {
+public class RandomGuessMatch {
 
 	public static void main(String[] args) 
 	{
@@ -16,8 +16,8 @@ final int TAILS = 5;
 		
 		random = HEADS + (int)(Math.random() * HEADS);
 		
-		guessString = JOptionPane.showInputDialog(null, " Guess which side the coin will land " + HEADS + " or " +
-		TAILS, "random guess",JOptionPane.INFORMATION_MESSAGE);
+		guessString = JOptionPane.showInputDialog(null, " Guess which side the coin will land " + HEADS + " TAILS " +
+		HEADS, "random guess",JOptionPane.INFORMATION_MESSAGE);
 		
 		guess = Integer.parseInt(guessString);
 		isMatch = guess == random;
