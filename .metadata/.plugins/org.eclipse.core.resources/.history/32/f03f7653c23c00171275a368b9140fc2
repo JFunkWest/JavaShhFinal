@@ -102,9 +102,6 @@ public class TicTacToe {
 
 
 
-			//display total winnings in JOptionPane here also declare total winnings through
-
-
 		}
 
 	}

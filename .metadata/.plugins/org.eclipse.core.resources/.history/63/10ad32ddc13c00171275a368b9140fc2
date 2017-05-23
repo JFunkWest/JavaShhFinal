@@ -1,5 +1,3 @@
-package finalJava;
-
 import java.awt.font.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -59,7 +57,6 @@ public class TicTacToe {
 			addActionListener(this);
 		}
 		public void actionPerformed(ActionEvent e) { // placing x or o's
-			int total = 0;
 			if((xOrO%2)==0 && getText().equals(" ") && win==false){
 				letter="X";
 				xOrO=xOrO+1;
@@ -83,12 +80,10 @@ public class TicTacToe {
 			
 			if(win == true){ // if the game ends let the user know who wins and give option to play again
 				again=JOptionPane.showConfirmDialog(null, letter + " wins the game!  Do you want to play again?",letter + "won!",JOptionPane.YES_NO_OPTION);
-				int winnings = 25;
-				total = total + winnings;
+				
 			} else if(xOrO == 9 && win == false){//tie game, announce and ask if the user want to play again
 				again=JOptionPane.showConfirmDialog(null, "The game was tie!  Do you want to play again?","Tie game!",JOptionPane.YES_NO_OPTION);
 				win=true;
-				total = total - 25;
 			}	
 			
 			if(again==JOptionPane.YES_OPTION && win==true){ // if the user want to play again clear all the button and start over
@@ -100,9 +95,6 @@ public class TicTacToe {
 			}
 
 
-
-
-			//display total winnings in JOptionPane here also declare total winnings through
 
 
 		}
