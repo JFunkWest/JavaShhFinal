@@ -1,0 +1,4 @@
+package finalJava;
+	public int money = 100;
+public class MoneyTotal {
+}

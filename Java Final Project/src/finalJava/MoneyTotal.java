@@ -1,17 +1,6 @@
 package finalJava;
-
+import javax.swing.JOptionPane;
 public class MoneyTotal {
-	private static int moneyTotal = 100;
+	public static int money = 100;
 
-	public static int getMoneyTotal() {
-		return moneyTotal;
-	}
-
-	public static void setMoneyTotal(int moneyTotal) {
-		MoneyTotal.moneyTotal = moneyTotal;
-	}
-
-	
-
-	
 }

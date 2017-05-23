@@ -13,35 +13,47 @@ public class MainMenu extends MoneyTotal {
 		int choiceConvert;
 		do{
 		choice = JOptionPane.showInputDialog(null, "Which game are you going to select?\n1: Flip a coin\n2: Tic Tac Toe "
-				+ "\n3: Guess the number \n4: Black Jack \n5: Russian Roulette  "); 
+				+ "\n3: Guess the number \n4: Craps \n5: Russian Roulette  "); 
 		choiceConvert = Integer.parseInt(choice);
 		
 		if(choiceConvert == 1)
 		{
-			do
-			{
+			do{
 			FlipACoin.displayOutcome();
 			playAgain =	JOptionPane.showInputDialog(null,  "Do you want to play again? Type 'Yes' for yes, or 'No' for no.", YES_NO_OPTION);
 			}while("Yes".equals(playAgain));
 		}
 		if(choiceConvert == 2)
 		{
-			int hi;
+			do{
+			TicTacToe.main(args);
+			playAgain =	JOptionPane.showInputDialog(null,  "Do you want to play again? Type 'Yes' for yes, or 'No' for no.", YES_NO_OPTION);
+			}while("Yes".equals(playAgain));
+			
 		}
 		
 		if(choiceConvert == 3)
 		{
-			int hiTwo;
+			do{
+			NumberGuess.main(args);
+			playAgain =	JOptionPane.showInputDialog(null,  "Do you want to play again? Type 'Yes' for yes, or 'No' for no.", YES_NO_OPTION);
+			}while("Yes".equals(playAgain));
 		}
 		
 		if(choiceConvert == 4)
 		{
-			BlackJack.displayBlackJack();
+			do{
+			Craps.displayCraps();
+			playAgain =	JOptionPane.showInputDialog(null,  "Do you want to play again? Type 'Yes' for yes, or 'No' for no.", YES_NO_OPTION);
+			}while("Yes".equals(playAgain));
 		}
 		
 		if(choiceConvert == 5)
 		{
-			int hiThree;
+			do{
+			RussianRoulette.main(args);
+			playAgain =	JOptionPane.showInputDialog(null,  "Do you want to play again? Type 'Yes' for yes, or 'No' for no.", YES_NO_OPTION);
+			}while("Yes".equals(playAgain));
 		}
 		}while("No".equals(choiceConvert));
 	}
