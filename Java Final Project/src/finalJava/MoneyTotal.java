@@ -1,6 +1,6 @@
 package finalJava;
-import javax.swing.JOptionPane;
+import org.w3c.dom.css.Counter;
+import javax.swing.*;
 public class MoneyTotal {
-	public static int money = 100;
 
 }

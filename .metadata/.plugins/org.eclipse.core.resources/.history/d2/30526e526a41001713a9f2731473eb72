@@ -1,0 +1,6 @@
+package finalJava;
+import javax.swing.*;
+
+public class MoneyTotal {
+
+}
