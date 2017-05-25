@@ -1,60 +1,72 @@
 package finalJava;
 import javax.swing.JOptionPane;
 
+import java.awt.Component;
 import java.util.Random;
 
 import javax.swing.*;
 public class FlipACoin {
 
+	private static int totalMonies;
+
 	public static void displayOutcome()
 	{
-	
-
+		int moneyWagered = 0, totalMonies = 500;
+		
 		Random r = new Random();
 		int computer = r.nextInt(2) + 1;
 		String userPick, computerPick, result = null;
 		String userAnswer, computerAnswer = null;
-		int answerInt,  winnings = 0, lose, moneyBet = 0;
-		String money = JOptionPane.showInputDialog(null, "How much money are you willing to bet?");
-		moneyBet = Integer.parseInt(money);
+		int answerInt, lose;
+		
+		MoneyTotal.displayMyMoney(moneyWagered, totalMonies);
+		
 		userAnswer = JOptionPane.showInputDialog(null, "Choose \n1 for Heads\n2 for Tails");
 		answerInt = Integer.parseInt(userAnswer);
-
-		if(answerInt == 1)
-		{
-			userAnswer = "Heads";
-			if(computer == 1)
+		if(totalMonies > 0){
+			if(answerInt == 1)
 			{
-				computerAnswer = "Heads";
-				result = "You Win Hahahahaha!";
-				winnings = moneyBet + 25;
+				userAnswer = "Heads";
+				if(computer == 1)
+				{
+					JOptionPane.showMessageDialog(null,  "You picked Heads. The coin landed on Heads.");
+					MoneyTotal.addMoney(moneyWagered, totalMonies);
+					
+					
+				}
+				else if(computer  == 2)
+				{
+					JOptionPane.showMessageDialog(null,  "You picked Heads. The coin landed on Tails.");
+					MoneyTotal.lostMoney(moneyWagered, totalMonies);
+				}
 			}
-			else if(computer  == 2)
+			if(answerInt == 2)
 			{
-				computerAnswer = "Tails";
-				result = "You lose, oh no!";
-				winnings = moneyBet - 25;
+				userAnswer = "Tails";
+				if(computer == 2)
+				{
+					JOptionPane.showMessageDialog(null,  "You picked Tails. The coin landed on Tails.");
+					MoneyTotal.addMoney(moneyWagered, totalMonies);
+				}
+				else if(computer  == 1)
+				{
+					JOptionPane.showMessageDialog(null,  "You picked Tails. The coin landed on Heads.");
+					MoneyTotal.lostMoney(moneyWagered, totalMonies);
+				}
 			}
 		}
-		if(answerInt == 2)
-		{
-			userAnswer = "Tails";
-			if(computer == 2)
-			{
-				computerAnswer = "Tails";
-				result = "You Win Hahahahaha!";
-				winnings = moneyBet + 25;
-			}
-			else if(computer  == 1)
-			{
-				computerAnswer = "Heads";
-				result = "You lose, oh no!";
-				winnings = moneyBet - 25;
-			}
+		else {
+			Component parentComponent = null;
+			JOptionPane.showConfirmDialog(parentComponent, "You're Broke Like A Joke! " + totalMonies);
 		}
+	
+	}
 
-		JOptionPane.showMessageDialog(null,  "You picked " + userAnswer + ". The coin landed on " + computerAnswer + ". " + result + " Your winnings or loss is $" + winnings + ".");
-	
-	
+	public static int getTotalMonies() {
+		return totalMonies;
+	}
+
+	public static void setTotalMonies(int totalMonies) {
+		FlipACoin.totalMonies = totalMonies;
 	}
 }

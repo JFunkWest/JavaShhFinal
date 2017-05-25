@@ -1,1 +1,4 @@
 1495561253874	Rename type 'BlackJack'
+1495734440959	Convert local variable 'totalMonies' to field
+1495734447854	Encapsulate field 'totalMonies'
+1495735526519	Convert local variable 'moneyBet' to field
