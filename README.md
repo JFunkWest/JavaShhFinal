@@ -1,1 +1,1 @@
-# JavaShhFinal
+This is our final where its contains casino type games. We have flip a coin, number guess, tic tac toe, crpas, and russian roulete. We also have a money system where you can make bets and either win money or lose money.
