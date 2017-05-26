@@ -43,7 +43,7 @@ public class MainMenu extends MoneyTotal {
 		{
 			int hiThree;
 		}
-		}while("No".equals(choiceConvert));
+		}while("No".equals(choice));
 	}
 }
 

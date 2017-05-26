@@ -26,7 +26,41 @@ public class RussianRoulette {
 		JOptionPane.showMessageDialog(null, "The number was " + random + ". The result is " + isMatch + ".");
 		
 		
-		
+		if(answerInt == 1)
+		{
+			userAnswer = "Heads";
+			if(computer == 1)
+			{
+				computerAnswer = "Heads";
+				result = "You Win Hahahahaha!";
+				winnings = moneyBet + 25;
+			}
+			else if(computer  == 2)
+			{
+				computerAnswer = "Tails";
+				result = "You lose, oh no!";
+				winnings = moneyBet - 25;
+			}
+		}
+		if(answerInt == 2)
+		{
+			userAnswer = "Tails";
+			if(computer == 2)
+			{
+				computerAnswer = "Tails";
+				result = "You Win Hahahahaha!";
+				winnings = moneyBet + 25;
+			}
+			else if(computer  == 1)
+			{
+				computerAnswer = "Heads";
+				result = "You lose, oh no!";
+				winnings = moneyBet - 25;
+			}
+		}
+
+		JOptionPane.showMessageDialog(null,  "You picked " + userAnswer + ". The coin landed on " + computerAnswer + ". " + result + " Your winnings or loss is $" + winnings + ".");
+	
 		
 	
 	}

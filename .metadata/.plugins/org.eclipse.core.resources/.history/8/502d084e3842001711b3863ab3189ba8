@@ -25,6 +25,11 @@ final int MAX = 10;
 		JOptionPane.showMessageDialog(null, "Your guess was " + (random-guess) + " number away from the random number.");
 		JOptionPane.showMessageDialog(null, "The number was " + random + ". The result is " + isMatch + ".");
 		
+		
+		
+		
+		
+		
 	}
 
 }
