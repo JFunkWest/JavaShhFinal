@@ -7,8 +7,6 @@ import java.util.Random;
 import javax.swing.*;
 public class FlipACoin {
 
-	private static int totalMonies;
-
 	public static void displayOutcome()
 	{
 		int moneyWagered = 0, totalMonies = 500;
@@ -57,15 +55,6 @@ public class FlipACoin {
 		else {
 			Component parentComponent = null;
 			JOptionPane.showConfirmDialog(parentComponent, "You're Broke Like A Joke! " + totalMonies);
-		}
-	
-	}
-
-	public static int getTotalMonies() {
-		return totalMonies;
-	}
-
-	public static void setTotalMonies(int totalMonies) {
-		FlipACoin.totalMonies = totalMonies;
+		}	
 	}
 }
