@@ -21,8 +21,6 @@ public class TicTacToe {
 	public static void main (String[] args)
 	{
 		gamePanel(); //launch game
-		
-		
 	}
 	
 	private static void gamePanel(){
@@ -66,7 +64,8 @@ public class TicTacToe {
 		}
 		public void actionPerformed(ActionEvent e) { // placing x or o's
 			int total = 0;
-			
+			int moneyWagered = 0, totalMonies = 500;
+			MoneyTotal.displayMyMoney(moneyWagered, totalMonies);
 			if((xOrO%2)==0 && getText().equals(" ") && win==false){
 				letter="X";
 				xOrO=xOrO+1;
@@ -78,7 +77,7 @@ public class TicTacToe {
 			} // if user does click on a button that is already played, nothing will happen
 			
 			setText(letter); // place the x or the o on the actual board
-	
+
 			
 			for(int i=0; i<=7; i++){ // check for the winning combinations
 				if( buttons[winCombinations[i][0]].getText().equals(buttons[winCombinations[i][1]].getText()) && 
@@ -87,7 +86,12 @@ public class TicTacToe {
 					win = true;
 				}
 			}
-			
+			if(win == false) {
+				MoneyTotal.lostMoney(moneyWagered, totalMonies);
+			}
+			else if(win == true) {
+				MoneyTotal.addMoney(moneyWagered, totalMonies);
+			}
 
 		}
 

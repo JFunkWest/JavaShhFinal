@@ -21,7 +21,8 @@ public class TicTacToe {
 	public static void main (String[] args)
 	{
 		gamePanel(); //launch game
-		
+		int moneyWagered = 0, totalMonies = 500;
+		MoneyTotal.displayMyMoney(moneyWagered, totalMonies);
 		
 	}
 	
@@ -66,7 +67,7 @@ public class TicTacToe {
 		}
 		public void actionPerformed(ActionEvent e) { // placing x or o's
 			int total = 0;
-			
+			int moneyWagered = 0, totalMonies = 500;
 			if((xOrO%2)==0 && getText().equals(" ") && win==false){
 				letter="X";
 				xOrO=xOrO+1;
@@ -87,7 +88,12 @@ public class TicTacToe {
 					win = true;
 				}
 			}
-			
+			if(win == false) {
+				MoneyTotal.lostMoney(moneyWagered, totalMonies);
+			}
+			else if(win == true) {
+				MoneyTotal.addMoney(moneyWagered, totalMonies);
+			}
 
 		}
 

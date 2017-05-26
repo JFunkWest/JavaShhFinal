@@ -15,9 +15,8 @@ public class FlipACoin {
 		
 		Random r = new Random();
 		int computer = r.nextInt(2) + 1;
-		String userPick, computerPick, result = null;
-		String userAnswer, computerAnswer = null;
-		int answerInt, lose;
+		String userAnswer= null;
+		int answerInt;
 		
 		MoneyTotal.displayMyMoney(moneyWagered, totalMonies);
 		
