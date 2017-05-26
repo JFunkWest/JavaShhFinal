@@ -1,0 +1,10 @@
+package finalJava;
+import javax.swing.*;
+public static int money = 100;
+JLabel scoreLabel = new JLabel("Score: 0");
+add(scoreLabel);
+public class MoneyTotal {
+	Score++;
+	scoreLabel.setBounds(5, 5, WIDTH, HEIGHT);
+	scoreLabel.setText("Score: " + Score);
+}

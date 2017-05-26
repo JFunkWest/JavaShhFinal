@@ -1,0 +1,80 @@
+package finalJava;
+import javax.swing.JOptionPane;
+
+import java.awt.Component;
+import java.util.Random;
+
+import javax.swing.*;
+public class FlipACoin {
+
+	private static int totalMonies;
+
+	public static void displayOutcome()
+	{
+		int moneyWagered = 0;
+		setTotalMonies(MoneyTotal.displayMyMoney(moneyWagered, totalMonies));
+
+		Random r = new Random();
+		int computer = r.nextInt(2) + 1;
+		String userPick, computerPick, result = null;
+		String userAnswer, computerAnswer = null;
+		int answerInt,  totalMonies, lose;
+		
+		MoneyTotal.displayMyMoney(moneyWagered, totalMonies);
+		
+		userAnswer = JOptionPane.showInputDialog(null, "Choose \n1 for Heads\n2 for Tails");
+		answerInt = Integer.parseInt(userAnswer);
+		if(totalMonies > 0){
+			if(answerInt == 1)
+			{
+				userAnswer = "Heads";
+				if(computer == 1)
+				{
+					computerAnswer = "Heads";
+					result = "You Win Hahahahaha!";
+					MoneyTotal.addMoney(moneyWagered, totalMonies);
+					
+					
+				}
+				else if(computer  == 2)
+				{
+					computerAnswer = "Tails";
+					result = "You lose, oh no!";
+					totalMonies = moneyBet - totalMonies;
+				}
+			}
+			if(answerInt == 2)
+			{
+				userAnswer = "Tails";
+				if(computer == 2)
+				{
+					computerAnswer = "Tails";
+					result = "You Win Hahahahaha!";
+					totalMonies = moneyBet + totalMonies;
+				}
+				else if(computer  == 1)
+				{
+					computerAnswer = "Heads";
+					result = "You lose, oh no!";
+					totalMonies = moneyBet - totalMonies;
+				}
+			}
+
+		JOptionPane.showMessageDialog(null,  "You picked " + userAnswer + ". The coin landed on " + 
+				computerAnswer + ". " + result + " Your total is $" + totalMonies + ".");
+		}
+		else {
+			Component parentComponent = null;
+			JOptionPane.showConfirmDialog(parentComponent, "You're Broke Like A Joke! " + totalMonies);
+		}
+	
+	}
+
+	public static int getTotalMonies() {
+		return totalMonies;
+	}
+
+	public static void setTotalMonies(int totalMonies) {
+		FlipACoin.totalMonies = totalMonies;
+	}
+}

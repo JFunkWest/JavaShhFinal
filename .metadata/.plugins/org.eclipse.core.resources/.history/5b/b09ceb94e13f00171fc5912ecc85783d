@@ -1,0 +1,62 @@
+package finalJava;
+import java.io.*;
+import javax.swing.*;
+
+import javax.swing.JOptionPane;
+public class MoneyTotal {
+	public static int money = 100;
+	class counter {
+		counter(int amount) {
+			int thousand, fivehundred, hundred, fifty, twenty, ten, five, two, one;
+			thousand = fivehundred = hundred = fifty = twenty = ten = five = two = one = 0;
+			while(amount>0) {
+				if(amount >= 1000) {
+					amount = amount - 1000;
+					thousand++;
+				}
+				else if(amount >= 500) {
+					amount = amount - 500;
+					fivehundred++;
+				}
+				else if(amount >= 100) {
+					amount = amount - 100;
+					hundred++;
+				}
+				else if(amount >= 50) {
+					amount = amount - 50;
+					fifty++;
+				}
+				else if(amount >= 20) {
+					amount = amount - 20;
+					twenty++;
+				}
+				else if(amount >= 10) {
+					amount = amount - 10;
+					ten++;
+				}
+				else if(amount >= 5) {
+					amount = amount - 5;
+					five++;
+				}
+				else if(amount >= 2) {
+					amount = amount - 2;
+					two++;
+				}
+				else {
+					amount = amount - 1;
+					one++;
+				}
+			}
+			JOptionPane.showMessageDialog(null, "Number of Coins/Notes");
+			JOptionPane.showMessageDialog(null, "Thousand - "+thousand);
+			JOptionPane.showMessageDialog(null, "Five Hundred - "+fivehundred);
+			JOptionPane.showMessageDialog(null, "Hundred - "+hundred);
+			JOptionPane.showMessageDialog(null, "Fifty - "+fifty);
+			JOptionPane.showMessageDialog(null, "Twenty - "+twenty);
+			JOptionPane.showMessageDialog(null, "Ten - "+ten);
+			JOptionPane.showMessageDialog(null, "Five - "+five);
+			JOptionPane.showMessageDialog(null, "Two - "+two);
+			JOptionPane.showMessageDialog(null, "One - "+one);
+		}
+	}
+}

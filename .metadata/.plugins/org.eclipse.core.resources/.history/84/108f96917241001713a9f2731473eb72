@@ -1,0 +1,10 @@
+package finalJava;
+
+public class MoneyTotal {
+
+	public static void displayMyMoney(int moneyWagered, int totalMonies)
+	{
+		totalMonies = 500;
+		totalMonies = totalMonies + moneyWagered; 
+	}
+}

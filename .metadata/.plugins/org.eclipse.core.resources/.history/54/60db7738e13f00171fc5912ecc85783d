@@ -1,0 +1,59 @@
+package finalJava;
+import java.io.*;
+public class MoneyTotal {
+	public static int money = 100;
+	class counter {
+		counter(int amount) {
+			int thousand, fivehundred, hundred, fifty, twenty, ten, five, two, one;
+			thousand = fivehundred = hundred = fifty = twenty = ten = five = two = one = 0;
+			while(amount>0) {
+				if(amount >= 1000) {
+					amount = amount - 1000;
+					thousand++;
+				}
+				else if(amount >= 500) {
+					amount = amount - 500;
+					fivehundred++;
+				}
+				else if(amount >= 100) {
+					amount = amount - 100;
+					hundred++;
+				}
+				else if(amount >= 50) {
+					amount = amount - 50;
+					fifty++;
+				}
+				else if(amount >= 20) {
+					amount = amount - 20;
+					twenty++;
+				}
+				else if(amount >= 10) {
+					amount = amount - 10;
+					ten++;
+				}
+				else if(amount >= 5) {
+					amount = amount - 5;
+					five++;
+				}
+				else if(amount >= 2) {
+					amount = amount - 2;
+					two++;
+				}
+				else {
+					amount = amount - 1;
+					one++;
+				}
+			}
+			System.out.println("Number of Coins/Notes");
+			System.out.println("Thousand - "+thousand);
+			System.out.println("Five Hundred - "+fivehundred);
+			System.out.println("Hundred - "+hundred);
+			System.out.println("Fifty - "+fifty);
+			System.out.println("Twenty - "+twenty);
+			System.out.println("Ten - "+ten);
+			System.out.println("Five - "+five);
+			System.out.println("Two - "+two);
+			System.out.println("One - "+one);
+		}
+	}
+}

@@ -13,8 +13,11 @@ final int MAX = 10;
 		int guess;
 		boolean isMatch;
 		String guessString;
+		int moneyWagered = 0, totalMonies = 500;
 		
 		random = MIN + (int)(Math.random() * MAX);
+		
+		MoneyTotal.displayMyMoney(moneyWagered, totalMonies);
 		
 		guessString = JOptionPane.showInputDialog(null, " Guess my number between " + MIN + " and " +
 		MAX, "random guess",JOptionPane.INFORMATION_MESSAGE);
@@ -24,12 +27,15 @@ final int MAX = 10;
 		
 		JOptionPane.showMessageDialog(null, "Your guess was " + (random-guess) + " number away from the random number.");
 		JOptionPane.showMessageDialog(null, "The number was " + random + ". The result is " + isMatch + ".");
-		
-		
-		
-		
-		
-		
+		if(isMatch == false)
+		{
+			MoneyTotal.lostMoney(moneyWagered, totalMonies);
+		}
+		else if(isMatch == true)
+		{
+			MoneyTotal.addMoney(moneyWagered, totalMonies);
+		}
+
 	}
 
 }
